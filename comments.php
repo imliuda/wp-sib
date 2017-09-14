@@ -13,27 +13,22 @@ if ( post_password_required() )
 		</h2>
 
 		<ol class="commentlist">
-			<?php wp_list_comments( array( 'callback' => 'twentytwelve_comment', 'style' => 'ol' ) ); ?>
-		</ol><!-- .commentlist -->
+			<?php wp_list_comments( array( 'callback' => 'sib_comment', 'style' => 'ol' ) ); ?>
+		</ol>
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-below" class="navigation" role="navigation">
-			<h1 class="assistive-text section-heading"><?php _e( 'Comment navigation', 'twentytwelve' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'twentytwelve' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'twentytwelve' ) ); ?></div>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+		<nav id="comment-nav" class="navigation" role="navigation">
+			<span class="previous"><?php previous_comments_link( '&larr; 较早评论' ); ?></span>
+			<span class="next"><?php next_comments_link( '较新评论 &rarr;' ); ?></span>
 		</nav>
-		<?php endif; // check for comment navigation ?>
-
-		<?php
-		/* If there are no comments and comments are closed, let's leave a note.
-		 * But we only want the note on posts and pages that had comments in the first place.
-		 */
-		if ( ! comments_open() && get_comments_number() ) : ?>
-		<p class="nocomments"><?php _e( 'Comments are closed.' , 'twentytwelve' ); ?></p>
 		<?php endif; ?>
 
-	<?php endif; // have_comments() ?>
+		<?php if ( ! comments_open() && get_comments_number() ) : ?>
+		<p class="nocomments"><?php _e( '评论已关闭' ); ?></p>
+		<?php endif; ?>
+
+	<?php endif; ?>
 
 	<?php comment_form(); ?>
 
-</div><!-- #comments .comments-area -->
+</div>

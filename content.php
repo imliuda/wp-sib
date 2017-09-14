@@ -6,7 +6,7 @@
 		<?php endif; ?>
 		<header class="entry-header">
 			<?php if ( is_single() ) : ?>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
+			<h1 class="post-title entry-title"><?php the_title(); ?></h1>
 			<?php else : ?>
 			<h1 class="entry-title">
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>

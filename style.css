@@ -39,7 +39,7 @@ a {
 }
 
 #header h1 {
-	font-size: 32px;
+	font-size: 30px;
 	font-weight: normal;
 }
 
@@ -162,29 +162,82 @@ a {
 	max-width: 648px;
 }
 
+.entry-title {
+	font-size: 22px;
+	padding-bottom: 5px;
+	font-weight: normal;
+}
+
+.entry-title.post-title,
+.entry-title.page-title {
+}
+
 .post {
 	border-bottom: 1px solid #f0f0f0;
 	padding-bottom: 12px;
 	margin-bottom: 15px;
 }
 
-.entry-header h1 {
-	font-size: 22px;
-	font-weight: normal;
-	padding-bottom: 5px;
-}
-
-.entry-header h1 a {
-	color: #000;
-}
-
 #comments {
+}
+
+#comments .children {
+	margin-left: 54px;
+}
+
+#comments li {
+	list-style: none;
 }
 
 .comments-title {
 	font-size: 19px;
 	font-weight: normal;
-	color: #000;
+}
+
+article.comment {
+	border-bottom: 1px solid #f0f0f0;
+	padding: 12px 0;
+}
+
+article.comment .avatar {
+	float: left;
+	border-radius: 3px;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+}
+
+article.comment .comment-meta,
+article.comment .comment-content {
+	padding-left: 54px;
+}
+
+article.comment .comment-meta {
+	line-height: 100%;
+	padding-top: 2px;
+	padding-bottom: 3px;
+	color: #666;
+}
+
+article.comment .comment-meta .fn {
+	color: #333;
+	margin-right: 2px;
+}
+
+article.comment .comment-meta cite {
+	margin-right: 5px;
+}
+
+article.comment .comment-meta .option {
+	float: right;
+}
+
+article.comment .comment-meta .edit-link {
+	margin-right: 12px;
+}
+
+#respond .comment-reply-title {
+	font-weight: normal;
+	padding: 12px 0;
 }
 
 #footer {
