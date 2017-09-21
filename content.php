@@ -14,6 +14,12 @@
 			<?php endif; ?>
 		</header>
 
+		<footer class="entry-meta">
+			<span class="category">分类：<?php the_category('，'); ?></span>
+			<?php if (has_tag()) : ?><span class="tags">标签：<?php the_tags($before='', $sep='，', $after=''); ?></span><?php endif; ?>
+			<span class="time">日期：<?php the_time('Y/n/j'); ?></span>
+		</footer>
+
 		<?php if ( ! is_single() ) : ?>
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>
@@ -23,10 +29,4 @@
 			<?php the_content(); ?>
 		</div>
 		<?php endif; ?>
-
-		<footer class="entry-meta">
-			<span class="category">分类：<?php the_category('，'); ?></span>
-			<span class="tags">标签：<?php the_tags($before='', $sep='，', $after=''); ?></span>
-			<span class="time">日期：<?php the_time('Y/n/j'); ?></span>
-		</footer>
 	</article>

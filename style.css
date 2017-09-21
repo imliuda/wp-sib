@@ -20,7 +20,7 @@ This the is personaly used by imliuda.com.
 
 body {
 	color: #333;
-	font-size: 15px;
+	font-size: 1em;
 	line-height: 165%;
 	background-color: #fafbfc;
 }
@@ -30,17 +30,38 @@ a {
 	text-decoration: none;
 }
 
+ul, ol {
+	padding-left: 0;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+	padding-left: 2em;
+}
+
+li {
+	list-style-position: inside;
+}
+
+pre {
+	border-radius: 3px;
+	background-color: #fbfbfb;
+	padding: 10px 12px;
+	border: 1px solid #e8e8e8;
+}
+
 #header {
-	width: 700px;
-	height: 130px;
+	width: 860px;
 	margin: auto;
 	padding-top: 35px;
 	text-align: center;
 }
 
 #header h1 {
-	font-size: 30px;
-	font-weight: normal;
+	font-size: 1.875em;
+	font-weight: 500;
 }
 
 #header h1 a {
@@ -48,24 +69,23 @@ a {
 }
 
 #header h2 {
-	font-size: 15px;
+	font-size: 0.9375em;
 	font-weight: normal;
 	margin-top: 15px;
 }
 
 #main-menu {
-	margin-top: 20px;
+	margin-top: 25px;
 }
 
 #main-menu li {
 	list-style: none;
 	display: inline-block;
-	margin: 0 15px;
+	margin: 0 18px;
 }
 
 #main-menu li a {
 	color: #222;
-	font-size: 15px;
 	text-decoration: underline;
 }
 
@@ -76,13 +96,15 @@ a {
 
 #main {
 	margin: auto;
-	width: 700px;
-	padding: 20px 25px;
+	margin-top: 25px;
+	width: 680px;
+	padding: 30px 35px;
 	border: 1px solid #e8e8e8;
-	box-sizing: border-box;
-	box-shadow: 1px 1px 0 #f2f2f2, -1px -1px 0 #f7f7f7;
-	border-radius: 3px;
+	box-shadow: 1px 1px 0 #f5f5f5;
+	box-shadow: -1px -1px 0 #f8f8f8;
+	border-radius: 5px;
 	background-color: #fff;
+	overflow: hidden;
 }
 
 #page-nav {
@@ -97,6 +119,7 @@ a {
 
 .entry-meta {
 	color: #999;
+	padding-bottom: 5px;
 }
 
 .entry-meta .tags,
@@ -110,16 +133,6 @@ a {
 
 .entry-content {
 	padding: 0 0 10px 0;
-}
-
-.entry-content ul,
-.entry-content ol {
-	text-indent: 2em;
-	margin: 0.5em 0;
-}
-
-.entry-content li {
-	list-style-position: inside;
 }
 
 .entry-content p {
@@ -141,30 +154,30 @@ a {
 }
 
 .entry-content h1 {
-	font-size: 20px;
+	font-size: 1.25em;
 }
 
 .entry-content h2 {
-	font-size: 18px;
+	font-size: 1.125em;
 }
 
 .entry-content h3 {
-	font-size: 16px;
+	font-size: 1em;
 }
 
 .entry-content h4,
 .entry-content h5,
 .entry-content h6 {
-	font-size: 15px;
+	font-size: 0.9375em;
 }
 
 .entry-content img {
-	max-width: 648px;
+	max-width: 680px;
 }
 
 .entry-title {
-	font-size: 22px;
-	padding-bottom: 5px;
+	font-size: 1.5em;
+	padding-bottom: 10px;
 	font-weight: normal;
 }
 
@@ -174,11 +187,17 @@ a {
 
 .post {
 	border-bottom: 1px solid #f0f0f0;
-	padding-bottom: 12px;
-	margin-bottom: 15px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 #comments {
+}
+
+#comments ul,
+#comments ol {
+	margin: 0;
+	padding: 0;
 }
 
 #comments .children {
@@ -190,54 +209,60 @@ a {
 }
 
 .comments-title {
-	font-size: 19px;
-	font-weight: normal;
+	font-size: 1.25em;
 }
 
 article.comment {
 	border-bottom: 1px solid #f0f0f0;
-	padding: 12px 0;
+	padding: 15px 0;
 }
 
 article.comment .avatar {
 	float: left;
-	border-radius: 3px;
+	border-radius: 5px;
 	border: 1px solid #ddd;
 	box-sizing: border-box;
 }
 
 article.comment .comment-meta,
-article.comment .comment-content {
-	padding-left: 54px;
+article.comment .comment-content,
+article.comment .comment-footer {
+	padding-left: 60px;
 }
 
 article.comment .comment-meta {
-	line-height: 100%;
-	padding-top: 2px;
-	padding-bottom: 3px;
-	color: #666;
+	color: #999;
 }
 
 article.comment .comment-meta .fn {
 	color: #333;
-	margin-right: 2px;
-}
-
-article.comment .comment-meta cite {
 	margin-right: 5px;
 }
 
-article.comment .comment-meta .option {
-	float: right;
+article.comment .comment-content {
+	padding-top: 3px;
+	padding-bottom: 3px;
 }
 
-article.comment .comment-meta .edit-link {
-	margin-right: 12px;
+article.comment .comment-footer time,
+article.comment .edit-link {
+	padding-right: 15px;
+	color: #999;
+}
+
+#respond {
 }
 
 #respond .comment-reply-title {
-	font-weight: normal;
-	padding: 12px 0;
+	padding-top: 15px;
+	font-size: 1.125em;
+}
+
+#respond #comment {
+	width: 100%;
+}
+
+#respond label {
 }
 
 #footer {

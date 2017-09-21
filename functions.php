@@ -352,7 +352,7 @@ function sib_comment( $comment, $args, $depth ) {
 	?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 		<article id="comment-<?php comment_ID(); ?>" class="comment">
-			<?php echo get_avatar( $comment, 44 ); ?>
+			<?php echo get_avatar( $comment, 48 ); ?>
 			<header class="comment-meta comment-author vcard">
 				<?php
 					printf( '<cite><b class="fn">%1$s</b> %2$s</cite>',
@@ -360,16 +360,7 @@ function sib_comment( $comment, $args, $depth ) {
 						// If current post author is also comment author, make it known visually.
 						( $comment->user_id === $post->post_author ) ? '<span>' . '文章作者' . '</span>' : ''
 					);
-					printf( '<time datetime="%1$s">%2$s</time>',
-						get_comment_time( 'c' ),
-						/* translators: 1: date, 2: time */
-						sprintf( __( '%1$s at %2$s', 'twentytwelve' ), get_comment_date(), get_comment_time() )
-					);
 				?>
-				<span class="option">
-				<?php edit_comment_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
-				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'twentytwelve' ), 'after' => ' <span>&darr;</span>', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-				</span>
 			</header>
 
 			<?php if ( '0' == $comment->comment_approved ) : ?>
@@ -379,7 +370,17 @@ function sib_comment( $comment, $args, $depth ) {
 			<section class="comment-content comment">
 				<?php comment_text(); ?>
 			</section>
-
+			<footer class="comment-footer">
+			<?php
+			printf( '<time datetime="%1$s">%2$s</time>',
+				get_comment_time( 'c' ),
+				/* translators: 1: date, 2: time */
+				sprintf( __( '%1$s at %2$s', 'twentytwelve' ), get_comment_date(), get_comment_time() )
+			);
+			edit_comment_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' );
+			comment_reply_link( array_merge( $args, array( 'reply_text' => '回复', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) );
+			?>
+			</footer>
 		</article>
 	<?php
 		break;
