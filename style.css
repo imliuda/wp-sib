@@ -50,6 +50,21 @@ pre {
 	background-color: #f8f8f8;
 	padding: 10px 12px;
 	border: 1px solid #e8e8e8;
+	word-wrap: break-word;
+	word-break: normal;
+	white-space: pre-wrap;
+}
+
+code {
+	line-height: 150%;
+	margin: -10px -12px;
+	white-space: pre;
+}
+
+pre,
+pre code {
+	font-size: 0.9375em;
+	font-family: "Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 }
 
 input[type=text],
@@ -122,7 +137,7 @@ input[type=submit] {
 	margin: auto;
 	margin-top: 25px;
 	width: 680px;
-	padding: 28px 35px;
+	padding: 32px 45px;
 	border: 1px solid #ddd;
 	box-shadow: 1px 1px 1px #eee, -1px -1px 1px #eee;
 	border-radius: 5px;
