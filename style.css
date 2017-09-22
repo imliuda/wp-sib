@@ -52,6 +52,30 @@ pre {
 	border: 1px solid #e8e8e8;
 }
 
+input[type=text],
+input[type=button],
+input[type=submit] {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	font-size: 1em;
+	line-height: 1em;
+	color: #333;
+	margin: 0;
+	padding: 5px 8px;
+	box-shadow: 1px 1px 2px #ddd inset, 1px 1px 1px #ddd;
+}
+
+input[type=button],
+input[type=submit] {
+	background: linear-gradient(to bottom, #0059b2, #0050a0);
+	border: 1px solid #0050a0;
+	box-shadow: none;
+	box-shadow: 1px 1px 2px #ccc;
+	color: #fff;
+	line-height: 1.1em;
+	font-size: 0.9375em;
+}
+
 #header {
 	width: 860px;
 	margin: auto;
@@ -81,7 +105,7 @@ pre {
 #main-menu li {
 	list-style: none;
 	display: inline-block;
-	margin: 0 18px;
+	margin: 0 15px;
 }
 
 #main-menu li a {
@@ -262,6 +286,39 @@ article.comment .edit-link {
 }
 
 #respond label {
+}
+
+#achieve-widgets {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+#achieve-widgets > div {
+	flex-basis: 33%;
+}
+
+#achieve-widgets .widget {
+	list-style: none;
+}
+
+#achieve-widgets h2 {
+	font-weight: normal;
+}
+
+#achieve-search-form {
+	padding: 15px 0;
+}
+
+#achieve-search-form label {
+	display: none;
+}
+
+#achieve-search-form input[type=text] {
+	width: 50%;
+	margin-right: 8px;
 }
 
 #footer {

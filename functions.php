@@ -286,13 +286,31 @@ add_filter( 'wp_page_menu_args', 'twentytwelve_page_menu_args' );
  *
  * Registers our main widget area and the front page widget areas.
  *
- * @since Twenty Twelve 1.0
+ * @since sib 1.0
  */
-function twentytwelve_widgets_init() {
+function sib_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Main Sidebar', 'twentytwelve' ),
-		'id' => 'sidebar-1',
-		'description' => __( 'Appears on posts and pages except the optional Front Page template, which has its own widgets', 'twentytwelve' ),
+		'name' => '归档页边栏1',
+		'id' => 'achieve-bar-1',
+		'description' => '这是文章归档页面，可添加分类目录，日期归档等小工具，显示在左侧。',
+	) );
+
+	register_sidebar( array(
+		'name' => '归档页边栏2',
+		'id' => 'achieve-bar-2',
+		'description' => '这是文章归档页面，可添加分类目录，日期归档等小工具，显示在中间。',
+	) );
+
+	register_sidebar( array(
+		'name' => '归档页边栏3',
+		'id' => 'achieve-bar-3',
+		'description' => '这是文章归档页面，可添加分类目录，日期归档等小工具，显示在右侧。',
+	) );
+
+	register_sidebar( array(
+		'name' => '底部边栏1',
+		'id' => 'footer-bar-1',
+		'description' => '底部边栏1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
@@ -300,26 +318,16 @@ function twentytwelve_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'First Front Page Widget Area', 'twentytwelve' ),
-		'id' => 'sidebar-2',
-		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'twentytwelve' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Second Front Page Widget Area', 'twentytwelve' ),
-		'id' => 'sidebar-3',
-		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'twentytwelve' ),
+		'name' => '底部边栏2',
+		'id' => 'footer-bar-2',
+		'description' => '底部边栏2',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
 }
-add_action( 'widgets_init', 'twentytwelve_widgets_init' );
+add_action( 'widgets_init', 'sib_widgets_init' );
 
 if ( ! function_exists( 'sib_page_nav' ) ) :
 function sib_page_nav( $html_id ) {
