@@ -198,14 +198,18 @@ input[type=submit] {
 	max-width: 680px;
 }
 
+.entry-title.post-title,
+.entry-title.page-title {
+}
+
 .entry-title {
-	font-size: 1.5em;
+	font-size: 1.4em;
 	padding-bottom: 10px;
 	font-weight: normal;
 }
 
-.entry-title.post-title,
-.entry-title.page-title {
+.post-title {
+	font-size: 1.5em;
 }
 
 .post {
