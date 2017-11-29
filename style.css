@@ -55,7 +55,7 @@ pre {
 	white-space: pre-wrap;
 }
 
-code {
+pre code {
 	line-height: 150%;
 	margin: -10px -12px;
 	white-space: pre;
@@ -174,7 +174,7 @@ input[type=submit] {
 }
 
 .entry-content p {
-	margin: 0.5em 0;
+	margin: 0.8em 0;
 }
 
 .entry-content p:last-child {
